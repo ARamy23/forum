@@ -13,4 +13,16 @@ class Thread extends Model
     {
         return $this->hasMany(Reply::class);
     }
+
+    public function path()
+    {
+        return '/api/threads/' . $this->id;
+    }
+
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    protected $guarded = [];
 }

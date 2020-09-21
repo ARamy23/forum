@@ -18,5 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Guarded Routes
+Route::middleware('auth:api')->group(function () {
+    Route::post('/threads', [\App\Http\Controllers\ThreadController::class, 'create']);
+    Route::post('/threads/{thread}/replies', [\App\Http\Controllers\ReplyController::class, 'create']);
+    Route::delete('/threads/{thread}', [\App\Http\Controllers\ThreadController::class, 'delete']);
+});
+
 Route::get('/threads', [\App\Http\Controllers\ThreadController::class, 'getAll']);
 Route::get('/threads/{thread}/replies', [\App\Http\Controllers\ReplyController::class, 'getAll']);
+

@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Reply;
 use App\Models\Thread;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -25,10 +26,17 @@ class ThreadsTests extends TestCase
             ->assertStatus(200);
     }
 
-//    /** @test */
-//    public function any_user_can_browse_replies() {
-//
-//    }
+    /** @test */
+    public function any_user_can_browse_replies() {
+        $this->withoutExceptionHandling();
+
+        $thread = Thread::factory()->create();
+        $reply = Reply::factory()->create(['thread_id' => $thread->id]);
+
+        $this->getJson("/api/threads/" . $thread->id . "/replies")
+            ->assertSee($reply['body'])
+            ->assertStatus(200);
+    }
 //
 //    /** @test */
 //    public function only_authenticated_users_can_make_threads() {

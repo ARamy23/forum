@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/threads', [\App\Http\Controllers\ThreadController::class, 'getAll']);
+Route::get('/threads/{thread}/replies', [\App\Http\Controllers\ReplyController::class, 'getAll']);

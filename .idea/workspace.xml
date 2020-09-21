@@ -142,7 +142,11 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="PHPUnit.ThreadsTests.any_user_can_browse_threads">
+  <component name="RunManager" selected="PHPUnit.ThreadsTests.any_user_can_browse_replies">
+    <configuration name="ThreadsTests.any_user_can_browse_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ThreadsTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTests.php" method="any_user_can_browse_replies" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="ThreadsTests.any_user_can_browse_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ThreadsTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTests.php" method="any_user_can_browse_threads" scope="Method" />
       <method v="2" />
@@ -153,6 +157,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ThreadsTests.any_user_can_browse_replies" />
         <item itemvalue="PHPUnit.ThreadsTests.any_user_can_browse_threads" />
       </list>
     </recent_temporary>
@@ -166,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600635589637</updated>
       <workItem from="1600635591648" duration="1158000" />
-      <workItem from="1600691144637" duration="1025000" />
+      <workItem from="1600691144637" duration="1955000" />
     </task>
     <servers />
   </component>
@@ -186,29 +191,29 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="508" y="92" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1600636568898" />
-    <state width="1388" height="218" key="GridCell.Tab.0.bottom" timestamp="1600692167320">
+    <state width="1388" height="218" key="GridCell.Tab.0.bottom" timestamp="1600693051023">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1388" height="218" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600692167320" />
-    <state width="1388" height="218" key="GridCell.Tab.0.center" timestamp="1600692167319">
+    <state width="1388" height="218" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600693051023" />
+    <state width="1388" height="218" key="GridCell.Tab.0.center" timestamp="1600693051021">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1388" height="218" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600692167319" />
-    <state width="1388" height="218" key="GridCell.Tab.0.left" timestamp="1600692167318">
+    <state width="1388" height="218" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600693051021" />
+    <state width="1388" height="218" key="GridCell.Tab.0.left" timestamp="1600693051020">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1388" height="218" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600692167318" />
-    <state width="1388" height="218" key="GridCell.Tab.0.right" timestamp="1600692167320">
+    <state width="1388" height="218" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600693051020" />
+    <state width="1388" height="218" key="GridCell.Tab.0.right" timestamp="1600693051022">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1388" height="218" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600692167320" />
+    <state width="1388" height="218" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600693051022" />
     <state x="119" y="1" key="SettingsEditor" timestamp="1600691300928">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="119" y="1" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1600691300928" />
-    <state x="301" y="0" width="838" height="1032" key="search.everywhere.popup" timestamp="1600692104899">
+    <state x="301" y="0" width="838" height="1032" key="search.everywhere.popup" timestamp="1600692630014">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="301" y="0" width="838" height="1032" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1600692104899" />
+    <state x="301" y="0" width="838" height="1032" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1600692630014" />
   </component>
 </project>

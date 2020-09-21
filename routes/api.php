@@ -23,6 +23,7 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/threads', [\App\Http\Controllers\ThreadController::class, 'create']);
     Route::post('/threads/{thread}/replies', [\App\Http\Controllers\ReplyController::class, 'create']);
     Route::delete('/threads/{thread}', [\App\Http\Controllers\ThreadController::class, 'delete']);
+    Route::delete('/threads/{thread}/replies/{reply}', [\App\Http\Controllers\ReplyController::class, 'delete']);
 });
 
 Route::get('/threads', [\App\Http\Controllers\ThreadController::class, 'getAll']);

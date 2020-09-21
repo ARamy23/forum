@@ -153,13 +153,9 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="PHPUnit.ThreadsTests.only_thread_owner_can_delete_his_thread">
+  <component name="RunManager" selected="PHPUnit.ThreadsTests.only_reply_owner_or_thread_owner_can_delete_replies">
     <configuration name="ThreadsTests.any_user_can_browse_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ThreadsTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTests.php" method="any_user_can_browse_replies" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ThreadsTests.any_user_can_browse_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ThreadsTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTests.php" method="any_user_can_browse_threads" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ThreadsTests.only_authenticated_users_can_make_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -168,6 +164,10 @@
     </configuration>
     <configuration name="ThreadsTests.only_authenticated_users_can_make_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ThreadsTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTests.php" method="only_authenticated_users_can_make_threads" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ThreadsTests.only_reply_owner_or_thread_owner_can_delete_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ThreadsTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTests.php" method="only_reply_owner_or_thread_owner_can_delete_replies" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ThreadsTests.only_thread_owner_can_delete_his_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -180,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ThreadsTests.only_reply_owner_or_thread_owner_can_delete_replies" />
         <item itemvalue="PHPUnit.ThreadsTests.only_thread_owner_can_delete_his_thread" />
         <item itemvalue="PHPUnit.ThreadsTests.only_authenticated_users_can_make_replies" />
         <item itemvalue="PHPUnit.ThreadsTests.only_authenticated_users_can_make_threads" />
         <item itemvalue="PHPUnit.ThreadsTests.any_user_can_browse_replies" />
-        <item itemvalue="PHPUnit.ThreadsTests.any_user_can_browse_threads" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +197,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600635589637</updated>
       <workItem from="1600635591648" duration="1158000" />
-      <workItem from="1600691144637" duration="6992000" />
+      <workItem from="1600691144637" duration="11988000" />
     </task>
     <servers />
   </component>
@@ -217,22 +217,22 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="508" y="92" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1600636568898" />
-    <state width="1388" height="218" key="GridCell.Tab.0.bottom" timestamp="1600698594795">
+    <state width="1388" height="306" key="GridCell.Tab.0.bottom" timestamp="1600705673367">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1388" height="218" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600698594795" />
-    <state width="1388" height="218" key="GridCell.Tab.0.center" timestamp="1600698594794">
+    <state width="1388" height="306" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600705673367" />
+    <state width="1388" height="306" key="GridCell.Tab.0.center" timestamp="1600705673366">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1388" height="218" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600698594794" />
-    <state width="1388" height="218" key="GridCell.Tab.0.left" timestamp="1600698594794">
+    <state width="1388" height="306" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600705673366" />
+    <state width="1388" height="306" key="GridCell.Tab.0.left" timestamp="1600705673366">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1388" height="218" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600698594794" />
-    <state width="1388" height="218" key="GridCell.Tab.0.right" timestamp="1600698594795">
+    <state width="1388" height="306" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600705673366" />
+    <state width="1388" height="306" key="GridCell.Tab.0.right" timestamp="1600705673367">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1388" height="218" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600698594795" />
+    <state width="1388" height="306" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600705673367" />
     <state x="119" y="1" key="SettingsEditor" timestamp="1600691300928">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -245,9 +245,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="347" y="166" width="746" height="568" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1600695459569" />
-    <state x="301" y="0" width="838" height="1032" key="search.everywhere.popup" timestamp="1600700085991">
+    <state x="301" y="0" width="838" height="1032" key="search.everywhere.popup" timestamp="1600704945595">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="301" y="0" width="838" height="1032" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1600700085991" />
+    <state x="301" y="0" width="838" height="1032" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1600704945595" />
   </component>
 </project>

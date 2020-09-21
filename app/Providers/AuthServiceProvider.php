@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Reply;
+use App\Models\Thread;
+use App\Policies\RepliesPolicy;
+use App\Policies\ThreadsPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Passport\Passport;
@@ -14,8 +18,8 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        // 'App\Models\Model' => 'App\Policies\ModelPolicy',
-        'App\Models\Thread' => 'App\Policies\ThreadsPolicy',
+        Thread::class => ThreadsPolicy::class,
+        Reply::class => RepliesPolicy::class,
     ];
 
     /**

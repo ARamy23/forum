@@ -26,4 +26,11 @@ class ReplyController extends Controller
             'body' => $attributes['body']
         ]);
     }
+
+    public function delete($thread, Reply $reply)
+    {
+        $this->authorize('delete', $reply);
+
+        return $reply->delete();
+    }
 }

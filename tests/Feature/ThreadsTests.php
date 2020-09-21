@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Reply;
 use App\Models\Thread;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -84,8 +85,61 @@ class ThreadsTests extends TestCase
     }
 
     /** @test */
-    public function only_reply_owner_or_thread_owner_can_delete_his_reply() {
+    public function only_reply_owner_or_thread_owner_can_delete_replies() {
+        $owner = $this->signIn();
+        $replier = User::factory()->create(['id' => 2]);
+        $replier2 = User::factory()->create(['id' => 3]);
 
+        $thread = Thread::factory()->create(['user_id' => $owner->id]);
+        $ownerReply1 = Reply::factory()->create([
+            'user_id' => $owner->id,
+            'thread_id' => $thread->id,
+            'id' => 23
+            ]);
+        $ownerReply2 = Reply::factory()->create([
+            'user_id' => $owner->id,
+            'thread_id' => $thread->id
+        ]);
+
+        $replierReply1 = Reply::factory()->create([
+            'user_id' => $replier->id,
+            'thread_id' => $thread->id
+        ]);
+
+        $replierReply2 = Reply::factory()->create([
+            'user_id' => $replier->id,
+            'thread_id' => $thread->id,
+            'id' => 12
+        ]);
+
+        $replier2Reply1 = Reply::factory()->create([
+            'user_id' => $replier2->id,
+            'thread_id' => $thread->id
+        ]);
+
+        $this->deleteJson($ownerReply1->path())
+            ->assertStatus(200);
+
+        $this->deleteJson($replierReply1->path())
+            ->assertStatus(200);
+
+
+        $this->actingAs($replier, 'api');
+
+        $this->deleteJson($ownerReply2->path())
+            ->assertStatus(403);
+
+        $this->deleteJson($replierReply2->path())
+            ->assertStatus(200);
+
+        $this->deleteJson($replier2Reply1->path())
+            ->assertStatus(403);
+
+        // owner tries to delete his reply -> respond with 200
+        // owner tries to delete replier's reply -> respond with 200
+        // Replier tries to delete owner's reply -> respond with 401
+        // Replier tries to delete his own reply -> respond with 200
+        // Replier tries to delete another replier's reply -> respond with 401
     }
 //
 //    /** @test */
